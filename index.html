@@ -1,0 +1,336 @@
+<!-- CSS STYLE -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap-theme.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,800;1,300;1,600;1,700&amp;amp;display=swap"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"
+/>
+<link rel="stylesheet" href="./assets/css/style.css" />
+
+<div class="main-window-region">
+  <div id="main-window">
+    <!-- <header id="header" class="">
+      <div>
+        <div class="windows-titlebar">
+          <img class="icon" src="#" alt="Movie & TV Time" />
+          <h1 class="windows-titlebar-title">Movie & TV</h1>
+          <div class="events img-" style="display: block"></div>
+          <div class="window-controls"></div>
+        </div>
+      </div>
+    </header> -->
+    <div id="content">
+      <div class="main-browser">
+        <div class="filter-bar-region">
+          <div class="filter-bar">
+            <ul class="nav nav-hor left">
+              <li class="source movieTabShow providerinfo active" id="movie">
+                Movies
+              </li>
+              <li class="source tvshowTabShow providerinfo" id="tv">Series</li>
+              <!--<li id="filterbar-favorites" class="source">Favorites</li>-->
+            </ul>
+            <ul id="nav-filters" class="nav nav-hor filters">
+              <li class="dropdown filter genres dropmovies">
+                <a
+                  class="dropdown-toggle"
+                  data-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Genre
+                  <span class="value genrefilm">All</span>
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#" onclick="sortMovies('action')">Action</a></li>
+                  <li>
+                    <a href="#" onclick="sortMovies('adventure')">Adventure</a>
+                  </li>
+                  <li>
+                    <a href="#" onclick="sortMovies('animation')">Animation</a>
+                  </li>
+                  <li><a href="#" onclick="sortMovies('comedy')">Comedy</a></li>
+                  <li><a href="#" onclick="sortMovies('crime')">Crime</a></li>
+                  <li>
+                    <a href="#" onclick="sortMovies('documentary')"
+                      >Documentary</a
+                    >
+                  </li>
+                  <li><a href="#" onclick="sortMovies('drama')">Drama</a></li>
+                  <li><a href="#" onclick="sortMovies('family')">Family</a></li>
+                  <li>
+                    <a href="#" onclick="sortMovies('fantasy')">Fantasy</a>
+                  </li>
+                  <li>
+                    <a href="#" onclick="sortMovies('history')">History</a>
+                  </li>
+                  <li><a href="#" onclick="sortMovies('horror')">Horror</a></li>
+                  <li><a href="#" onclick="sortMovies('music')">Music</a></li>
+                  <li>
+                    <a href="#" onclick="sortMovies('mystery')">Mystery</a>
+                  </li>
+                  <li>
+                    <a href="#" onclick="sortMovies('romance')">Romance</a>
+                  </li>
+                  <li>
+                    <a href="#" onclick="sortMovies('science fiction')"
+                      >Sci-Fi</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" onclick="sortMovies('tv movie')">TV Movie</a>
+                  </li>
+                  <li>
+                    <a href="#" onclick="sortMovies('thriller')">Thriller</a>
+                  </li>
+                  <li><a href="#" onclick="sortMovies('war')">War</a></li>
+                  <li>
+                    <a href="#" onclick="sortMovies('western')">Western</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown filter sorters dropmovies">
+                <a
+                  class="dropdown-toggle"
+                  data-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Sort by
+                  <span class="value sortfilm">Popular</span>
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#" onclick="sortMovies('popularity')">Popular</a>
+                  </li>
+                  <li><a href="#" onclick="sortMovies('rating')">Rating</a></li>
+                  <li>
+                    <a href="#" onclick="sortMovies('grossing')">Grossing</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown filter genres droptv">
+                <a
+                  class="dropdown-toggle"
+                  data-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Genre
+                  <span class="value genreseries">All</span>
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#" onclick="sortTv('action')">Action</a></li>
+                  <li>
+                    <a href="#" onclick="sortTv('animation')">Animation</a>
+                  </li>
+                  <li><a href="#" onclick="sortTv('comedy')">Comedy</a></li>
+                  <li><a href="#" onclick="sortTv('crime')">Crime</a></li>
+                  <li>
+                    <a href="#" onclick="sortTv('documentary')">Documentary</a>
+                  </li>
+                  <li><a href="#" onclick="sortTv('drama')">Drama</a></li>
+                  <li><a href="#" onclick="sortTv('family')">Family</a></li>
+                  <li><a href="#" onclick="sortTv('kids')">Kids</a></li>
+                  <li><a href="#" onclick="sortTv('mystery')">Mystery</a></li>
+                  <li><a href="#" onclick="sortTv('reality')">Reality</a></li>
+                  <li>
+                    <a href="#" onclick="sortTv('science fiction')">Sci-Fi</a>
+                  </li>
+                  <li>
+                    <a href="#" onclick="sortTv('war')">War & Politics</a>
+                  </li>
+                  <li><a href="#" onclick="sortTv('western')">Western</a></li>
+                </ul>
+              </li>
+              <li class="dropdown filter sorters droptv">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  Sort by
+                  <span class="value sortseries">Popular</span>
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#" onclick="sortTv('popularity')">Popular</a>
+                  </li>
+                  <li><a href="#" onclick="sortTv('rating')">Rating</a></li>
+                  <li><a href="#" onclick="sortTv('grossing')">Grossing</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav nav-hor right">
+              <li>
+                <div class="right search">
+                  <form>
+                    <input
+                      id="search"
+                      type="text"
+                      placeholder="Search"
+                      onKeyPress="return checkSubmit(event)"
+                      value=""
+                    />
+                    <div class="clear fa fa-times"></div>
+                  </form>
+                </div>
+              </li>
+              <!-- About -->
+              <li>
+                <i id="filterbar-about" class="fa fa-info-circle about"></i>
+              </li>
+              <!-- Settings -->
+              <!-- <li>
+                <i id="filterbar-settings" class="fa fa-cog settings"></i>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+        <div class="list-region">
+          <ul class="list">
+            <div class="spinner" style="display: none">
+              <div class="loading-container">
+                <div class="ball"></div>
+                <div class="ball1"></div>
+              </div>
+            </div>
+            <div class="items main" tabindex="1"></div>
+            <div class="load-more more">
+              <span class="status-loadmore">More</span>
+            </div>
+            <div class="load-more moreTV">
+              <span class="status-loadmore">More</span>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="movie-detail">
+      <div class="movie-detail" style="display: none">
+        <div class="backdrop"></div>
+        <div class="backdrop-overlay"></div>
+        <div class="chiudi"></div>
+        <section class="poster-box">
+          <img src="./assets/img/no-smoking.jpg" class="mcover-image" />
+        </section>
+        <section class="content-box">
+          <div class="meta-container">
+            <div class="title movietitle"></div>
+            <div class="movietagline"></div>
+            <div class="metadatas">
+              <div class="metaitem"></div>
+              <div class="year movieyear"></div>
+              <div class="metaitem movieruntime"></div>
+              <div class="metaitem moviegenres"></div>
+              <div class="metaitem rating-container film">
+                <div class="star-container film"></div>
+                <div class="number-container hidden">2 <em>/10</em></div>
+              </div>
+            </div>
+            <div class="movieproduk"></div>
+            <div class="moviecountry"></div>
+
+            <div class="overview movieplot"></div>
+            <div class="moviecast"></div>
+
+            <div class="movie-tagline"></div>
+          </div>
+          <div id="play-control">
+            <div>
+              <div class="play-control">
+                <div class="flex-left">
+                  <div class="row setup-container">
+                    <!-- <div class="toggles-container">
+                      <a href="#" class="favourites-toggle">Add to bookmarks</a>
+                      <div class="watched-toggle">Not Seen</div>
+                    </div> -->
+                  </div>
+                  <div class="row">
+                    <div
+                      id="watch-trailer"
+                      href="#"
+                      data-toggle="lightbox"
+                      data-type="youtube"
+                      class="button play-selector lightbox"
+                    >
+                      Watch Trailer
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="shows-container-contain" style="display: none">
+        <div class="show-detail-container">
+          <section class="show-header">
+            <div class="sh-backdrop">
+              <div class="shb-img"></div>
+            </div>
+            <div class="sh-poster">
+              <div class="shp-img"></div>
+            </div>
+            <div class="sh-metadata">
+              <div class="shm-title"></div>
+              <div class="shm-infos">
+                <div class="shmi-year"></div>
+                <span class="dot"></span>
+                <div class="shmi-runtime"></div>
+                <span class="dot"></span>
+                <div class="shmi-status"></div>
+                <span class="dot"></span>
+                <div class="shmi-genre"></div>
+                <span class="dot"></span>
+                <div class="shmi-rating">
+                  <div class="star-container-tv"></div>
+                  <div class="number-container-tv hidden">8.6<em>/10</em></div>
+                </div>
+              </div>
+              <div class="shm-synopsis"></div>
+            </div>
+          </section>
+          <section class="show-details">
+            <div class="spinner" style="display: none">
+              <div class="loading-container">
+                <div class="ball"></div>
+                <div class="ball1"></div>
+              </div>
+            </div>
+            <div class="column seasons"></div>
+            <div class="column episodes" style="overflow: auto"></div>
+            <div class="sd-overview" style="min-width: 480px"></div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JAVASCRIPT -->
+<script src="./popup.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+<script id="rendered-js" src="./assets/js/app.js"></script>
